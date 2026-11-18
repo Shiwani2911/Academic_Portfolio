@@ -376,24 +376,51 @@
     padding: 0.15rem 0.5rem; border-radius: 4px; margin-bottom: 0.75rem;
   }
 
-  /* ── PROJECT DEMO VIDEO ── */
-.project-video-wrap {
+ .project-video-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   margin-top: 1.5rem;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1px solid var(--border-accent);
   background: #000;
 }
 
 .project-video-wrap iframe {
+  display: block;
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin-top: 1.5rem;
+  padding: 12px 20px;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #A78BFA;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-demo-btn:hover {
+  background: var(--purple);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(139, 92, 246, 0.25);
 }
 
   /* ── EDUCATION ── */
@@ -750,15 +777,13 @@
         <p class="project-desc">
           Full-stack academic support platform architected on the MERN stack. Integrates OpenAI GPT and Gemini APIs to automate high-accuracy, real-time responses to student queries. Features secure JWT authentication and granular role-based access controls for users and administrators.
         </p>
-        <div class="project-video-wrap">
-  <iframe
-    src="https://drive.google.com/file/d/1-tmkjpx2qFT5QXqEL-qIOK1N6GQli49I/preview"
-    title="SIBA Digital Academic Support Platform Demo"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-    loading="lazy">
-  </iframe>
-</div>
+    <a
+  href="https://drive.google.com/file/d/1-tmkjpx2qFT5QXqEL-qIOK1N6GQli49I/view"
+  class="project-demo-btn"
+  target="_blank"
+  rel="noopener noreferrer">
+  <span>▶</span> Watch Project Demo
+</a>
         <div class="project-tags">
           <span class="project-tag">MongoDB</span>
           <span class="project-tag">Express.js</span>
